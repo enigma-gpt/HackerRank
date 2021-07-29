@@ -2,6 +2,9 @@ package com.zukov.learning.hackerank.algo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 public class CompareTheTriplets {
 
@@ -17,14 +20,26 @@ public class CompareTheTriplets {
     public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         // Write your code here
 
+        List<Integer> totalScore = new ArrayList<>();
+        totalScore.add(0);
+        totalScore.add(0);
 
+        Stream.of(0,1,2).forEach(index -> {
+            int aliceScore = a.get(index);
+            int bobsScore = b.get(index);
 
-
-        return new ArrayList<>();
-
-
+            if (aliceScore != bobsScore) {
+                if (aliceScore > bobsScore) {
+                    totalScore.set(0, totalScore.get(0) + 1);
+                } else {
+                    totalScore.set(1, totalScore.get(1) + 1);
+                }
+            }
+        });
+        return totalScore;
     }
 
-
-
+    public static void main(String[] args) {
+        System.out.println(compareTriplets(List.of(10,20,30), List.of(20,30,40)));
+    }
 }

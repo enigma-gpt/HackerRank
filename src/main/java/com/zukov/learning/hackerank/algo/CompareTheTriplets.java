@@ -2,8 +2,6 @@ package com.zukov.learning.hackerank.algo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Stream;
 
 public class CompareTheTriplets {
@@ -37,9 +35,5 @@ public class CompareTheTriplets {
             }
         });
         return totalScore;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(compareTriplets(List.of(10,20,30), List.of(20,30,40)));
     }
 }

@@ -26,8 +26,8 @@ public class ApplesAndOranges {
      */
 
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
-        final var appleCount = apples.stream().filter(fruitFilter(a, s ,t)).count();
-        final var orangeCount = oranges.stream().filter(fruitFilter(b, s ,t)).count();
+        final long appleCount = apples.stream().filter(fruitFilter(a, s ,t)).count();
+        final long orangeCount = oranges.stream().filter(fruitFilter(b, s ,t)).count();
 
         System.out.println(appleCount);
         System.out.println(orangeCount);

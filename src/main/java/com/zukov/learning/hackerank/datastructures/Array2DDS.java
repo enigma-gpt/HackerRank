@@ -1,4 +1,4 @@
-package com.zukov.learning.hackerank.algo;
+package com.zukov.learning.hackerank.datastructures;
 
 import java.util.List;
 

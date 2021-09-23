@@ -37,6 +37,6 @@ class ArrayManipulationTest {
 
         final var l = ArrayManipulation.arrayManipulation(n, input);
 
-        then(l).isEqualTo(24L);
+        then(l).isEqualTo(31L);
     }
 }

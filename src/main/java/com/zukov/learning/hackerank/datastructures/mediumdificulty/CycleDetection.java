@@ -1,5 +1,7 @@
 package com.zukov.learning.hackerank.datastructures.mediumdificulty;
 
+import com.zukov.learning.hackerank.datastructures.util.SinglyLinkedListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -7,20 +9,6 @@ public class CycleDetection {
 
     public static boolean hasCycle(SinglyLinkedListNode head) {
         return hashAlgo(head);
-    }
-
-    public static class SinglyLinkedListNode {
-        int data;
-        SinglyLinkedListNode next;
-
-        public SinglyLinkedListNode(int data, SinglyLinkedListNode next) {
-            this.data = data;
-            this.next = next;
-        }
-
-        public void setNext(SinglyLinkedListNode next) {
-            this.next = next;
-        }
     }
 
     private static boolean hashAlgo(SinglyLinkedListNode head) {

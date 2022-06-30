@@ -1,24 +1,17 @@
-//TODO: to be implemented
-def mergeLists(head1, head2):
+def findMergeNode(head1, head2):
 
-    tempHead1 = head1
-    tempHead2 = head2
+    current1 = head1
+    current2 = head2
 
-    newHead = head1 if head1.data < head2.data else head2
+    while current1 != current2:
+        if current1.next is None:
+            current1 = head2
+        else:
+            current1 = current1.next
 
-    if newHead == None:
-        return None
+        if current2.next is None:
+            current2 = head1
+        else:
+            current2 = current2.next
 
-    if newHead.next != None:
-        newHead = newHead.next
-
-    while not (tempHead1 == None and tempHead2 == None):
-
-        if tempHead1 == None:
-            newHead.next = tempHead2
-
-        if tempHead2 == None:
-            newHead.next = tempHead1
-
-        if newHead.next == None:
-            newHead = tempHead1 if tempHead1.data < tempHead2.data else tempHead2
+    return current2.data

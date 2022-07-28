@@ -2,7 +2,6 @@ package com.zukov.learning.hackerank.datastructures;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 public class ArrayManipulation {
 
